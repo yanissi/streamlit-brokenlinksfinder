@@ -1,5 +1,5 @@
 import streamlit as st
-
+import base64
 import requests
 from urllib.parse import urlparse
 from usp.tree import sitemap_tree_for_homepage
@@ -195,3 +195,10 @@ if submit_button:
     st.spinner(text="Generating Dataframe...")
 
     st.dataframe(matchBrokenLinks(brokenLinksList,externalLinksListRaw))
+    df = matchBrokenLinks(brokenLinksList,externalLinksListRaw)
+
+    csv = df.to_csv(index=False)
+    b64 = base64.b64encode(csv.encode()).decode()
+    st.markdown('### **⬇️ Download Output as CSV File **')
+    href = f'<a href="data:file/csv;base64,{b64}">Download CSV File</a> (right-click and save as "filename.csv")'
+    st.markdown(href, unsafe_allow_html=True)
