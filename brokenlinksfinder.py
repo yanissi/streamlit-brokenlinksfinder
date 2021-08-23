@@ -11,6 +11,7 @@ st.set_page_config(page_title="Broken Links Finder",page_icon="🔗",layout="wid
 
 st.title('Broken Links Finder by Yaniss Illoul from Martech with Me')
 st.header("Broken Links Finder")
+st.warning("This application can encounter issues at the moment than I am trying to figure out. For an unknown reason, the application runs perfectly fine locally but not on Streamlit's servers. You can find the source code of the app by clicking on the hamburger menu at the top-right corner of your screen and 'View app source'. Please contact me on LinkedIn if you need any assistance with that. Thank you and sorry for any inconvenience.")
 st.markdown("This interface has been developed by [Yaniss Illoul](https://www.linkedin.com/in/yanissi/) (Feel free to connect!) from [Martech with Me](https://martechwithme.com/?utm_source=brokenlinksfinder&utm_medium=streamlit).")
 st.markdown("If you like this project, please consider visiting my website for more Martech tools and tutorials. Don't hesitate to reach out if you have any feature requests or ideas.")
 
